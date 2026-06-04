@@ -1,0 +1,28 @@
+# 환경 변수 / 비밀키
+.env
+
+# 파이썬
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# 가상환경
+.venv/
+venv/
+env/
+
+# 데이터 / 벡터스토어 (용량 큼)
+data/
+vectorstore/
+*.faiss
+*.pkl
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml

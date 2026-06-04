@@ -1,0 +1,10 @@
+langchain
+langchain-google-genai
+langchain-community
+google-generativeai
+faiss-cpu
+pdfplumber
+python-dotenv
+streamlit
+requests
+tiktoken
