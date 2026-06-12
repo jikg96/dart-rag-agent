@@ -1,4 +1,5 @@
 import os
+from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain_community.vectorstores import FAISS
@@ -22,9 +23,9 @@ def load_retriever(index_path: str = "data/processed/faiss_index"):
 
 def build_chain():
     retriever = load_retriever()
-    llm = ChatGoogleGenerativeAI(
-        model="gemini-2.0-flash-lite",
-        google_api_key=GOOGLE_API_KEY,
+    llm = ChatGroq(
+        model="llama-3.1-8b-instant",
+        api_key=os.getenv("GROQ_API_KEY"),
         temperature=0
     )
     prompt = ChatPromptTemplate.from_template("""
